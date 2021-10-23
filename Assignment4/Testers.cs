@@ -6,10 +6,10 @@ namespace A4
 	static class Task1Tester
 	{
 		private const int NUM_TEST_CARDS = 10;
-		private static readonly Random rand = new(2718);
+		private static readonly Random rand = new Random(2718);
 		public static void Test()
 		{
-			List<Card> cards = new() { };
+			List<Card> cards = new List<Card>() { };
 			for (int i = 0; i < NUM_TEST_CARDS; ++i)
 			{
 				cards.Add(RandomCard());
@@ -49,7 +49,7 @@ namespace A4
 		private const int MAX_PASSENGERS = 100;
 		private const int MAX_TIRES = 12;
 		private const int MIN_TIRES = 4;
-		private static readonly Random rand = new(3141592);
+		private static readonly Random rand = new Random(3141592);
 		
 		public static void Test()
 		{
@@ -61,7 +61,7 @@ namespace A4
 		private static void TestAbstract()
 		{
 			Console.WriteLine("\t\t***Output using an abstract class***");
-			List<Task2Abstract.PassengerCarrier> carriers = new() { };
+			List<Task2Abstract.PassengerCarrier> carriers = new List<Task2Abstract.PassengerCarrier>() { };
 			for (int i = 0; i < NUM_CARRIERS; ++i)
 			{
 				var passengers = rand.Next(MAX_PASSENGERS);
@@ -83,7 +83,7 @@ namespace A4
 		private static void TestInterface()
 		{
 			Console.WriteLine("\t\t***Output using an interface***");
-			List<Task2Interface.ICarryPassengers> carriers = new() { };
+			List<Task2Interface.ICarryPassengers> carriers = new List<Task2Interface.ICarryPassengers>() { };
 			for (int i = 0; i < NUM_CARRIERS; ++i)
 			{
 				var passengers = rand.Next(MAX_PASSENGERS);
